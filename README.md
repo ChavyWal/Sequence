@@ -3,7 +3,7 @@
 ## Overview
 This Repo is for the software implementation of The Sequence
 Game. This software is for a one player game where the user gets to test and sharpen his/her
-memory. A description of the game plus the requirements is provided below.
+memory.
 
 ## The Game
 The player gets four images to memorize in the correct order for a specific amount of time. When
