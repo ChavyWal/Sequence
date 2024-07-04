@@ -9,6 +9,6 @@ memory.
 The player gets four images to memorize in the correct order for a specific amount of time. When
 the time is over the user clicks on the buttons bellow where the images match the images that was displayed above before the timeout.
 
-**The full spec is included in the Docs folder**
+**The full spec is included in the Docs folder https://github.com/users/ChavyWal/projects/1/views/2?pane=issue&itemId=69716628**
 
 ![SequenceWireFrame](https://github.com/ChavyWal/Sequence/assets/144060582/4f2b8fc0-4a8d-4467-b22a-16bd40dc14fc)
