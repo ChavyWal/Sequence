@@ -95,7 +95,7 @@ namespace SequenceCode
             }
         }
 
-        private void RefreshGame()
+        private void StartGame()
         {
             GameStatus = GameStatusEnum.start;
             score = 1;
@@ -143,30 +143,25 @@ namespace SequenceCode
 
         private string GetRandomLetter()
         {
-            ; StringBuilder sb = new();
+            StringBuilder sb = new();
             Random rnd = new();
             sb.Append((char)rnd.Next(65, 85));
             string s = sb.ToString();
             return s;
         }
 
-        private void BtnRoundstartbutton_Click(object? sender, EventArgs e)
-        {
-            RoundStartClick();
-        }
-
         private int DetermineCurrentImageBox()
         {
             int i = 4;
-            if (lblImageBox1.ForeColor != Color.White && lblImageBox1.ForeColor != Color.Red)
+            if (lblImageBox1.ForeColor == Color.Black )
             {
                 i = 1;
             }
-            else if (lblImagebox2.ForeColor != Color.White && lblImagebox2.ForeColor != Color.Red)
+            else if (lblImagebox2.ForeColor == Color.Black )
             {
                 i = 2;
             }
-            else if (lblImagebox3.ForeColor != Color.White && lblImagebox3.ForeColor != Color.Red)
+            else if (lblImagebox3.ForeColor == Color.Black )
             {
                 i = 3;
             }
@@ -185,72 +180,83 @@ namespace SequenceCode
                 imagebox.ForeColor = Color.Red;
             }
         }
+        private void ImageButtonClick(Button btn)
+        {
+            int i = DetermineCurrentImageBox();
+            switch (i)
+            {
+                case 1:
+                    CorrectorIncorrect(lblImageBox1, btn);
+                    break;
+                case 2:
+                    CorrectorIncorrect(lblImagebox2, btn);
+                    break;
+                case 3:
+                    CorrectorIncorrect(lblImagebox3, btn);
+                    break;
+                case 4:
+                    CorrectorIncorrect(lblImagebox4, btn);
+                    int t = ImageLabels.Count(l => l.ForeColor == Color.White);
+                    txtRoundscorenumber.Text = t + "/4";
+                    btnRoundstartbutton.Enabled = true;
+                    btnRoundstartbutton.Text = "Click me to start round #" + (round++).ToString();
+                    lblMessagebox.Text = "";
+                    if (t == 4)
+                    {
+                        ImageLabels.ForEach(l => l.ForeColor = Color.SpringGreen);
+                        lblMessagebox.Text = "Great Job!";
+                        txtPerfectscores.Text = (score++).ToString();
+                        lblMessagebox.Font = new Font("Times new roman", 20, FontStyle.Bold);
+                        switch (score)
+                        {
+                            case 6:
+                                LevelUp(5, Color.Yellow);
+                                break;
+                            case 11:
+                                LevelUp(3, Color.OrangeRed);
+                                n = 3;
+                                break;
+                            case 16:
+                                DateTime starttime = DateTime.Now;
+                                while ((DateTime.Now - starttime).TotalSeconds <= 5)
+                                {
+                                    lblMessagebox.Text = "YOU WON!!!!!!!!!!!";
+                                    ImageButtons.ForEach(b => b.BackColor = Color.HotPink);
+                                    Application.DoEvents();
+                                }
+                                StartGame();
+                                break;
+                        }
+                    }
+                    ImageButtons.ForEach(b => b.Enabled = false);
+                    break;
+            }
+
+        }
+        private void LevelUp(int seconds, Color c)
+        {
+            n = seconds;
+            lblMessagebox.Text = "You are up to level " + (level).ToString() + "! You get only " + n.ToString() + " seconds to memorize the 4 images.";
+            txtLevelnumber.Text = (level++).ToString();
+            ImageButtons.ForEach(b => b.BackColor = c);
+        }
 
         private void B_Click(object? sender, EventArgs e)
         {
-            int i = DetermineCurrentImageBox();
             if (sender is Button)
             {
-                Button btn = (Button)sender;
-                switch (i)
-                {
-                    case 1:
-                        CorrectorIncorrect(lblImageBox1, btn);
-                        break;
-                    case 2:
-                        CorrectorIncorrect(lblImagebox2, btn);
-                        break;
-                    case 3:
-                        CorrectorIncorrect(lblImagebox3, btn);
-                        break;
-                    case 4:
-                        CorrectorIncorrect(lblImagebox4, btn);
-                        int t = ImageLabels.Count(l => l.ForeColor == Color.White);
-                        txtRoundscorenumber.Text = t + "/4";
-                        btnRoundstartbutton.Enabled = true;
-                        btnRoundstartbutton.Text = "Click me to start round #" + (round++).ToString();
-                        lblMessagebox.Text = "";
-                        if (t == 4)
-                        {
-                            ImageLabels.ForEach(l => l.ForeColor = Color.SpringGreen);
-                            lblMessagebox.Text = "Great Job!";
-                            txtPerfectscores.Text = (score++).ToString();
-                            lblMessagebox.Font = new Font("Times new roman", 20, FontStyle.Bold);
-                            switch (score)
-                            {
-                                case 6:
-                                    n = 5;
-                                    lblMessagebox.Text = "You are up to level " + (level).ToString() + "! You get only " + n.ToString() + " seconds to memorize the 4 images.";
-                                    txtLevelnumber.Text = (level++).ToString();
-                                    ImageButtons.ForEach(b => b.BackColor = Color.Yellow);
-                                    break;
-                                case 11:
-                                    n = 3;
-                                    lblMessagebox.Text = "You are up to level " + (level).ToString() + "! You get only " + n.ToString() + " seconds to memorize the 4 images.";
-                                    txtLevelnumber.Text = (level).ToString();
-                                    ImageButtons.ForEach(b => b.BackColor = Color.OrangeRed);
-                                    break;
-                                case 16:
-                                    DateTime starttime = DateTime.Now;
-                                    while ((DateTime.Now - starttime).TotalSeconds <= 5)
-                                    {
-                                        lblMessagebox.Text = "YOU WON!!!!!!!!!!!";
-                                        ImageButtons.ForEach(b => b.BackColor = Color.HotPink);
-                                        Application.DoEvents();
-                                    }
-                                    RefreshGame();
-                                    break;
-                            }
-                        }
-                        ImageButtons.ForEach(b => b.Enabled = false);
-                        break;
-                }
+                ImageButtonClick((Button)sender);
             }
+        }
+
+        private void BtnRoundstartbutton_Click(object? sender, EventArgs e)
+        {
+            RoundStartClick();
         }
 
         private void BtnStart_Click(object? sender, EventArgs e)
         {
-            RefreshGame();
+            StartGame();
         }
 
     }
