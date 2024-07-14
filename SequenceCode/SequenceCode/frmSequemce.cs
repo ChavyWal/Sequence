@@ -1,4 +1,6 @@
-﻿using Microsoft.VisualBasic;
+﻿//AS It's a little confusing that when the game pops up there is a start btn and then a click me to start round #1 btn. 
+//AS When the game starts, the round btn should be blank, only once start is clicked, set it's text to say 'click me...'.
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +19,7 @@ namespace SequenceCode
         GameStatusEnum GameStatus;
         List<Label> ImageLabels;
         List<Button> ImageButtons;
+//AS Name this variable more clearly.
         int n = 10;
         int score = 1;
         int level = 1;                  //
@@ -32,7 +35,7 @@ namespace SequenceCode
             ImageButtons.ForEach(b => b.Click += B_Click);
             txtLevelnumber.Text = (level++).ToString();
         }
-
+//AS Name these paramaters more clearly ie: Enable1, Enable2, Enable3
         private void controls(bool bo, bool boo, bool bb)
         {
             ImageButtons.ForEach(b => b.Enabled = boo);
@@ -60,7 +63,7 @@ namespace SequenceCode
                     break;
             }
         }
-
+//AS I don't think it makes the code more concise but making a new procedure for this, put the code directly into SetBackcolor
         private void getlabelBackColor(Color c)
         {
             ImageLabels.ForEach(l => l.BackColor = c);
@@ -107,6 +110,7 @@ namespace SequenceCode
             txtRoundscorenumber.Text = " / 4";
             txtLevelnumber.Text = "1";
             btnRoundstartbutton.Text = "Click me to start round #1";
+//AS This should be set in the designer.
             lblMessagebox.Font = new Font("Times new roman", 14, FontStyle.Regular);
             ImageButtons.ForEach(b => b.BackColor = Color.White);
             EnableDisable();
