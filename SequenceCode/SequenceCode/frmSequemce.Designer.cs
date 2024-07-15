@@ -100,7 +100,7 @@
             tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 28.5053921F));
             tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 9.090909F));
             tblMain.RowStyles.Add(new RowStyle(SizeType.Percent, 52.85054F));
-            tblMain.Size = new Size(1102, 669);
+            tblMain.Size = new Size(1102, 676);
             tblMain.TabIndex = 0;
             // 
             // tbloutput
@@ -117,12 +117,12 @@
             tbloutput.Controls.Add(lblImagebox4, 3, 0);
             tbloutput.Controls.Add(tblScore, 4, 0);
             tbloutput.Dock = DockStyle.Fill;
-            tbloutput.Location = new Point(20, 65);
+            tbloutput.Location = new Point(20, 66);
             tbloutput.Name = "tbloutput";
             tbloutput.RowCount = 1;
             tbloutput.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tbloutput.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tbloutput.Size = new Size(1059, 184);
+            tbloutput.Size = new Size(1059, 186);
             tbloutput.TabIndex = 0;
             // 
             // lblImageBox1
@@ -133,7 +133,7 @@
             lblImageBox1.ForeColor = Color.Black;
             lblImageBox1.Location = new Point(3, 0);
             lblImageBox1.Name = "lblImageBox1";
-            lblImageBox1.Size = new Size(205, 184);
+            lblImageBox1.Size = new Size(205, 186);
             lblImageBox1.TabIndex = 0;
             // 
             // lblImagebox2
@@ -145,7 +145,7 @@
             lblImagebox2.ForeColor = Color.Black;
             lblImagebox2.Location = new Point(214, 0);
             lblImagebox2.Name = "lblImagebox2";
-            lblImagebox2.Size = new Size(205, 184);
+            lblImagebox2.Size = new Size(205, 186);
             lblImagebox2.TabIndex = 1;
             // 
             // lblImagebox3
@@ -157,7 +157,7 @@
             lblImagebox3.ForeColor = Color.Black;
             lblImagebox3.Location = new Point(425, 0);
             lblImagebox3.Name = "lblImagebox3";
-            lblImagebox3.Size = new Size(205, 184);
+            lblImagebox3.Size = new Size(205, 186);
             lblImagebox3.TabIndex = 2;
             // 
             // lblImagebox4
@@ -169,7 +169,7 @@
             lblImagebox4.ForeColor = Color.Black;
             lblImagebox4.Location = new Point(636, 0);
             lblImagebox4.Name = "lblImagebox4";
-            lblImagebox4.Size = new Size(205, 184);
+            lblImagebox4.Size = new Size(205, 186);
             lblImagebox4.TabIndex = 3;
             // 
             // tblScore
@@ -191,7 +191,7 @@
             tblScore.RowStyles.Add(new RowStyle(SizeType.Percent, 47.32143F));
             tblScore.RowStyles.Add(new RowStyle(SizeType.Percent, 52.67857F));
             tblScore.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
-            tblScore.Size = new Size(209, 178);
+            tblScore.Size = new Size(209, 180);
             tblScore.TabIndex = 4;
             // 
             // lblLevel
@@ -203,7 +203,7 @@
             lblLevel.ForeColor = Color.Black;
             lblLevel.Location = new Point(3, 0);
             lblLevel.Name = "lblLevel";
-            lblLevel.Size = new Size(131, 58);
+            lblLevel.Size = new Size(131, 59);
             lblLevel.TabIndex = 0;
             lblLevel.Text = "Level ";
             lblLevel.TextAlign = ContentAlignment.MiddleCenter;
@@ -215,9 +215,9 @@
             lblPerfectscores.Enabled = false;
             lblPerfectscores.Font = new Font("Bookman Old Style", 11F);
             lblPerfectscores.ForeColor = Color.Black;
-            lblPerfectscores.Location = new Point(3, 58);
+            lblPerfectscores.Location = new Point(3, 59);
             lblPerfectscores.Name = "lblPerfectscores";
-            lblPerfectscores.Size = new Size(131, 65);
+            lblPerfectscores.Size = new Size(131, 66);
             lblPerfectscores.TabIndex = 2;
             lblPerfectscores.Text = "# of perfect scores:";
             lblPerfectscores.TextAlign = ContentAlignment.MiddleCenter;
@@ -229,7 +229,7 @@
             lblRoundScore.Enabled = false;
             lblRoundScore.Font = new Font("Bookman Old Style", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblRoundScore.ForeColor = Color.Black;
-            lblRoundScore.Location = new Point(3, 123);
+            lblRoundScore.Location = new Point(3, 125);
             lblRoundScore.Name = "lblRoundScore";
             lblRoundScore.Size = new Size(131, 55);
             lblRoundScore.TabIndex = 4;
@@ -254,7 +254,7 @@
             txtPerfectscores.Dock = DockStyle.Fill;
             txtPerfectscores.Enabled = false;
             txtPerfectscores.Font = new Font("Bookman Old Style", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtPerfectscores.Location = new Point(140, 61);
+            txtPerfectscores.Location = new Point(140, 62);
             txtPerfectscores.Name = "txtPerfectscores";
             txtPerfectscores.ReadOnly = true;
             txtPerfectscores.Size = new Size(66, 29);
@@ -267,7 +267,7 @@
             txtRoundscorenumber.Dock = DockStyle.Fill;
             txtRoundscorenumber.Enabled = false;
             txtRoundscorenumber.Font = new Font("Bookman Old Style", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtRoundscorenumber.Location = new Point(140, 126);
+            txtRoundscorenumber.Location = new Point(140, 128);
             txtRoundscorenumber.Name = "txtRoundscorenumber";
             txtRoundscorenumber.ReadOnly = true;
             txtRoundscorenumber.Size = new Size(66, 29);
@@ -282,12 +282,12 @@
             tblORundstartButton.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80.8656F));
             tblORundstartButton.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 179F));
             tblORundstartButton.Controls.Add(btnRoundstartbutton, 1, 0);
-            tblORundstartButton.Location = new Point(20, 255);
+            tblORundstartButton.Location = new Point(20, 258);
             tblORundstartButton.Name = "tblORundstartButton";
             tblORundstartButton.RowCount = 1;
             tblORundstartButton.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             tblORundstartButton.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tblORundstartButton.Size = new Size(1059, 54);
+            tblORundstartButton.Size = new Size(1059, 55);
             tblORundstartButton.TabIndex = 1;
             // 
             // btnRoundstartbutton
@@ -298,9 +298,8 @@
             btnRoundstartbutton.Font = new Font("Times New Roman", 18F);
             btnRoundstartbutton.Location = new Point(171, 3);
             btnRoundstartbutton.Name = "btnRoundstartbutton";
-            btnRoundstartbutton.Size = new Size(705, 48);
+            btnRoundstartbutton.Size = new Size(705, 49);
             btnRoundstartbutton.TabIndex = 0;
-            btnRoundstartbutton.Text = "Click me to start round #1";
             btnRoundstartbutton.UseVisualStyleBackColor = false;
             // 
             // tblImagebuttons
@@ -311,12 +310,12 @@
             tblImagebuttons.Controls.Add(tblImagebuttons1, 0, 0);
             tblImagebuttons.Controls.Add(tblImageButtons2, 0, 1);
             tblImagebuttons.Dock = DockStyle.Fill;
-            tblImagebuttons.Location = new Point(20, 315);
+            tblImagebuttons.Location = new Point(20, 319);
             tblImagebuttons.Name = "tblImagebuttons";
             tblImagebuttons.RowCount = 2;
             tblImagebuttons.RowStyles.Add(new RowStyle(SizeType.Percent, 68.34319F));
             tblImagebuttons.RowStyles.Add(new RowStyle(SizeType.Percent, 31.656805F));
-            tblImagebuttons.Size = new Size(1059, 351);
+            tblImagebuttons.Size = new Size(1059, 354);
             tblImagebuttons.TabIndex = 2;
             // 
             // tblImagebuttons1
@@ -352,7 +351,7 @@
             tblImagebuttons1.RowCount = 2;
             tblImagebuttons1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
             tblImagebuttons1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblImagebuttons1.Size = new Size(1053, 233);
+            tblImagebuttons1.Size = new Size(1053, 235);
             tblImagebuttons1.TabIndex = 0;
             // 
             // btnA
@@ -362,7 +361,7 @@
             btnA.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnA.Location = new Point(3, 3);
             btnA.Name = "btnA";
-            btnA.Size = new Size(130, 110);
+            btnA.Size = new Size(130, 111);
             btnA.TabIndex = 0;
             btnA.Text = "A";
             btnA.UseVisualStyleBackColor = true;
@@ -374,7 +373,7 @@
             btnB.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnB.Location = new Point(139, 3);
             btnB.Name = "btnB";
-            btnB.Size = new Size(131, 110);
+            btnB.Size = new Size(131, 111);
             btnB.TabIndex = 1;
             btnB.Text = "B";
             btnB.UseVisualStyleBackColor = true;
@@ -386,7 +385,7 @@
             btnC.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnC.Location = new Point(276, 3);
             btnC.Name = "btnC";
-            btnC.Size = new Size(125, 110);
+            btnC.Size = new Size(125, 111);
             btnC.TabIndex = 2;
             btnC.Text = "C";
             btnC.UseVisualStyleBackColor = true;
@@ -398,7 +397,7 @@
             btnD.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnD.Location = new Point(407, 3);
             btnD.Name = "btnD";
-            btnD.Size = new Size(123, 110);
+            btnD.Size = new Size(123, 111);
             btnD.TabIndex = 3;
             btnD.Text = "D";
             btnD.UseVisualStyleBackColor = true;
@@ -410,7 +409,7 @@
             btnE.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnE.Location = new Point(536, 3);
             btnE.Name = "btnE";
-            btnE.Size = new Size(123, 110);
+            btnE.Size = new Size(123, 111);
             btnE.TabIndex = 4;
             btnE.Text = "E";
             btnE.UseVisualStyleBackColor = true;
@@ -422,7 +421,7 @@
             btnF.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnF.Location = new Point(665, 3);
             btnF.Name = "btnF";
-            btnF.Size = new Size(130, 110);
+            btnF.Size = new Size(130, 111);
             btnF.TabIndex = 5;
             btnF.Text = "F";
             btnF.UseVisualStyleBackColor = true;
@@ -434,7 +433,7 @@
             btnG.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnG.Location = new Point(801, 3);
             btnG.Name = "btnG";
-            btnG.Size = new Size(125, 110);
+            btnG.Size = new Size(125, 111);
             btnG.TabIndex = 6;
             btnG.Text = "G";
             btnG.UseVisualStyleBackColor = true;
@@ -446,7 +445,7 @@
             btnH.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnH.Location = new Point(932, 3);
             btnH.Name = "btnH";
-            btnH.Size = new Size(118, 110);
+            btnH.Size = new Size(118, 111);
             btnH.TabIndex = 7;
             btnH.Text = "H";
             btnH.UseVisualStyleBackColor = true;
@@ -456,9 +455,9 @@
             btnI.Dock = DockStyle.Fill;
             btnI.Enabled = false;
             btnI.Font = new Font("Wingdings", 48F, FontStyle.Bold);
-            btnI.Location = new Point(3, 119);
+            btnI.Location = new Point(3, 120);
             btnI.Name = "btnI";
-            btnI.Size = new Size(130, 111);
+            btnI.Size = new Size(130, 112);
             btnI.TabIndex = 8;
             btnI.Text = "I";
             btnI.UseVisualStyleBackColor = true;
@@ -468,9 +467,9 @@
             btnJ.Dock = DockStyle.Fill;
             btnJ.Enabled = false;
             btnJ.Font = new Font("Wingdings", 48F, FontStyle.Bold);
-            btnJ.Location = new Point(139, 119);
+            btnJ.Location = new Point(139, 120);
             btnJ.Name = "btnJ";
-            btnJ.Size = new Size(131, 111);
+            btnJ.Size = new Size(131, 112);
             btnJ.TabIndex = 9;
             btnJ.Text = "J";
             btnJ.UseVisualStyleBackColor = true;
@@ -480,9 +479,9 @@
             btnK.Dock = DockStyle.Fill;
             btnK.Enabled = false;
             btnK.Font = new Font("Wingdings", 48F, FontStyle.Bold);
-            btnK.Location = new Point(276, 119);
+            btnK.Location = new Point(276, 120);
             btnK.Name = "btnK";
-            btnK.Size = new Size(125, 111);
+            btnK.Size = new Size(125, 112);
             btnK.TabIndex = 10;
             btnK.Text = "K";
             btnK.UseVisualStyleBackColor = true;
@@ -492,9 +491,9 @@
             btnL.Dock = DockStyle.Fill;
             btnL.Enabled = false;
             btnL.Font = new Font("Wingdings", 48F, FontStyle.Bold);
-            btnL.Location = new Point(407, 119);
+            btnL.Location = new Point(407, 120);
             btnL.Name = "btnL";
-            btnL.Size = new Size(123, 111);
+            btnL.Size = new Size(123, 112);
             btnL.TabIndex = 11;
             btnL.Text = "L";
             btnL.UseVisualStyleBackColor = true;
@@ -504,9 +503,9 @@
             btnM.Dock = DockStyle.Fill;
             btnM.Enabled = false;
             btnM.Font = new Font("Wingdings", 48F, FontStyle.Bold);
-            btnM.Location = new Point(536, 119);
+            btnM.Location = new Point(536, 120);
             btnM.Name = "btnM";
-            btnM.Size = new Size(123, 111);
+            btnM.Size = new Size(123, 112);
             btnM.TabIndex = 12;
             btnM.Text = "M";
             btnM.UseVisualStyleBackColor = true;
@@ -516,9 +515,9 @@
             btnN.Dock = DockStyle.Fill;
             btnN.Enabled = false;
             btnN.Font = new Font("Wingdings", 48F, FontStyle.Bold);
-            btnN.Location = new Point(665, 119);
+            btnN.Location = new Point(665, 120);
             btnN.Name = "btnN";
-            btnN.Size = new Size(130, 111);
+            btnN.Size = new Size(130, 112);
             btnN.TabIndex = 13;
             btnN.Text = "N";
             btnN.UseVisualStyleBackColor = true;
@@ -528,9 +527,9 @@
             btnO.Dock = DockStyle.Fill;
             btnO.Enabled = false;
             btnO.Font = new Font("Wingdings", 48F, FontStyle.Bold);
-            btnO.Location = new Point(801, 119);
+            btnO.Location = new Point(801, 120);
             btnO.Name = "btnO";
-            btnO.Size = new Size(125, 111);
+            btnO.Size = new Size(125, 112);
             btnO.TabIndex = 14;
             btnO.Text = "O";
             btnO.UseVisualStyleBackColor = true;
@@ -540,9 +539,9 @@
             btnP.Dock = DockStyle.Fill;
             btnP.Enabled = false;
             btnP.Font = new Font("Wingdings", 48F, FontStyle.Bold);
-            btnP.Location = new Point(932, 119);
+            btnP.Location = new Point(932, 120);
             btnP.Name = "btnP";
-            btnP.Size = new Size(118, 111);
+            btnP.Size = new Size(118, 112);
             btnP.TabIndex = 15;
             btnP.Text = "P";
             btnP.UseVisualStyleBackColor = true;
@@ -561,11 +560,11 @@
             tblImageButtons2.Controls.Add(btnT, 4, 0);
             tblImageButtons2.Controls.Add(btnStart, 2, 0);
             tblImageButtons2.Dock = DockStyle.Fill;
-            tblImageButtons2.Location = new Point(3, 242);
+            tblImageButtons2.Location = new Point(3, 244);
             tblImageButtons2.Name = "tblImageButtons2";
             tblImageButtons2.RowCount = 1;
             tblImageButtons2.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tblImageButtons2.Size = new Size(1053, 106);
+            tblImageButtons2.Size = new Size(1053, 107);
             tblImageButtons2.TabIndex = 1;
             // 
             // btnQ
@@ -575,7 +574,7 @@
             btnQ.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnQ.Location = new Point(3, 3);
             btnQ.Name = "btnQ";
-            btnQ.Size = new Size(130, 100);
+            btnQ.Size = new Size(130, 101);
             btnQ.TabIndex = 0;
             btnQ.Text = "Q";
             btnQ.UseVisualStyleBackColor = true;
@@ -587,7 +586,7 @@
             btnR.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnR.Location = new Point(139, 3);
             btnR.Name = "btnR";
-            btnR.Size = new Size(134, 100);
+            btnR.Size = new Size(134, 101);
             btnR.TabIndex = 1;
             btnR.Text = "R";
             btnR.UseVisualStyleBackColor = true;
@@ -599,7 +598,7 @@
             btnS.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnS.Location = new Point(802, 3);
             btnS.Name = "btnS";
-            btnS.Size = new Size(127, 100);
+            btnS.Size = new Size(127, 101);
             btnS.TabIndex = 2;
             btnS.Text = "S";
             btnS.UseVisualStyleBackColor = true;
@@ -611,7 +610,7 @@
             btnT.Font = new Font("Wingdings", 48F, FontStyle.Bold);
             btnT.Location = new Point(935, 3);
             btnT.Name = "btnT";
-            btnT.Size = new Size(115, 100);
+            btnT.Size = new Size(115, 101);
             btnT.TabIndex = 3;
             btnT.Text = "T";
             btnT.UseVisualStyleBackColor = true;
@@ -623,7 +622,7 @@
             btnStart.Font = new Font("Times New Roman", 18F);
             btnStart.Location = new Point(279, 3);
             btnStart.Name = "btnStart";
-            btnStart.Size = new Size(517, 100);
+            btnStart.Size = new Size(517, 101);
             btnStart.TabIndex = 4;
             btnStart.Text = "START";
             btnStart.UseVisualStyleBackColor = false;
@@ -635,7 +634,7 @@
             lblMessagebox.Font = new Font("Times New Roman", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblMessagebox.Location = new Point(20, 0);
             lblMessagebox.Name = "lblMessagebox";
-            lblMessagebox.Size = new Size(1059, 62);
+            lblMessagebox.Size = new Size(1059, 63);
             lblMessagebox.TabIndex = 3;
             lblMessagebox.Text = "Click start to begin the game.";
             // 

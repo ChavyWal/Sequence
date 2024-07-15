@@ -1,5 +1,5 @@
-﻿//AS It's a little confusing that when the game pops up there is a start btn and then a click me to start round #1 btn. 
-//AS When the game starts, the round btn should be blank, only once start is clicked, set it's text to say 'click me...'.
+﻿///AS It's a little confusing that when the game pops up there is a start btn and then a click me to start round #1 btn. 
+///AS When the game starts, the round btn should be blank, only once start is clicked, set it's text to say 'click me...'.
 using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
@@ -19,8 +19,10 @@ namespace SequenceCode
         GameStatusEnum GameStatus;
         List<Label> ImageLabels;
         List<Button> ImageButtons;
-//AS Name this variable more clearly.
-        int n = 10;
+/// <summary>
+/// AS Name this variable more clearly.
+/// </summary>
+        int time = 10;
         int score = 1;
         int level = 1;                  //
         int round = 2;
@@ -35,17 +37,17 @@ namespace SequenceCode
             ImageButtons.ForEach(b => b.Click += B_Click);
             txtLevelnumber.Text = (level++).ToString();
         }
-//AS Name these paramaters more clearly ie: Enable1, Enable2, Enable3
-        private void controls(bool bo, bool boo, bool bb)
+///AS Name these paramaters more clearly ie: Enable1, Enable2, Enable3
+        private void controls(bool Enable1, bool Enable2, bool Enable3)
         {
-            ImageButtons.ForEach(b => b.Enabled = boo);
-            btnRoundstartbutton.Enabled = bb;
-            txtPerfectscores.Enabled = bo;
-            txtRoundscorenumber.Enabled = bo;
-            txtLevelnumber.Enabled = bo;
-            lblLevel.Enabled = bo;
-            lblPerfectscores.Enabled = bo;
-            lblRoundScore.Enabled = bo;
+            ImageButtons.ForEach(b => b.Enabled = Enable2);
+            btnRoundstartbutton.Enabled = Enable3;
+            txtPerfectscores.Enabled = Enable1;
+            txtRoundscorenumber.Enabled = Enable1;
+            txtLevelnumber.Enabled = Enable1;
+            lblLevel.Enabled = Enable1;
+            lblPerfectscores.Enabled = Enable1;
+            lblRoundScore.Enabled = Enable1;
         }
 
         private void EnableDisable()
@@ -63,21 +65,17 @@ namespace SequenceCode
                     break;
             }
         }
-//AS I don't think it makes the code more concise but making a new procedure for this, put the code directly into SetBackcolor
-        private void getlabelBackColor(Color c)
-        {
-            ImageLabels.ForEach(l => l.BackColor = c);
-        }
+///AS I don't think it makes the code more concise but making a new procedure for this, put the code directly into SetBackcolor
 
         private void SetBackcolor()
         {
             switch (GameStatus)
             {
                 case GameStatusEnum.Memorize:
-                    getlabelBackColor(Color.Turquoise);
+                    ImageLabels.ForEach(l => l.BackColor = Color.Turquoise);
                     break;
                 default:
-                    getlabelBackColor(Color.Black);
+                    ImageLabels.ForEach(l => l.BackColor = Color.Black);
                     break;
             }
         }
@@ -110,8 +108,7 @@ namespace SequenceCode
             txtRoundscorenumber.Text = " / 4";
             txtLevelnumber.Text = "1";
             btnRoundstartbutton.Text = "Click me to start round #1";
-//AS This should be set in the designer.
-            lblMessagebox.Font = new Font("Times new roman", 14, FontStyle.Regular);
+            ///AS This should be set in the designer.
             ImageButtons.ForEach(b => b.BackColor = Color.White);
             EnableDisable();
             SetMessageBox();
@@ -123,7 +120,7 @@ namespace SequenceCode
             DateTime starttime = DateTime.Now;
             GameStatus = GameStatusEnum.Memorize;
             ImageLabels.ForEach(l => l.Text = GetRandomLetter());
-            while ((DateTime.Now - starttime).TotalSeconds <= n && GameStatus == GameStatusEnum.Memorize)
+            while ((DateTime.Now - starttime).TotalSeconds <= time && GameStatus == GameStatusEnum.Memorize)
             {
                 ImageButtons.ForEach(b => b.Enabled = false);
                 ImageLabels.ForEach(l => l.BackColor = Color.Turquoise);
@@ -210,7 +207,6 @@ namespace SequenceCode
                         ImageLabels.ForEach(l => l.ForeColor = Color.SpringGreen);
                         lblMessagebox.Text = "Great Job!";
                         txtPerfectscores.Text = (score++).ToString();
-                        lblMessagebox.Font = new Font("Times new roman", 20, FontStyle.Bold);
                         switch (score)
                         {
                             case 6:
@@ -218,7 +214,7 @@ namespace SequenceCode
                                 break;
                             case 11:
                                 LevelUp(3, Color.OrangeRed);
-                                n = 3;
+                                time = 3;
                                 break;
                             case 16:
                                 DateTime starttime = DateTime.Now;
@@ -239,8 +235,8 @@ namespace SequenceCode
         }
         private void LevelUp(int seconds, Color c)
         {
-            n = seconds;
-            lblMessagebox.Text = "You are up to level " + (level).ToString() + "! You get only " + n.ToString() + " seconds to memorize the 4 images.";
+            time = seconds;
+            lblMessagebox.Text = "You are up to level " + (level).ToString() + "! You get only " + time.ToString() + " seconds to memorize the 4 images.";
             txtLevelnumber.Text = (level++).ToString();
             ImageButtons.ForEach(b => b.BackColor = c);
         }
