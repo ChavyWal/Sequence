@@ -1,6 +1,4 @@
-﻿///AS It's a little confusing that when the game pops up there is a start btn and then a click me to start round #1 btn. 
-///AS When the game starts, the round btn should be blank, only once start is clicked, set it's text to say 'click me...'.
-using Microsoft.VisualBasic;
+﻿using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,9 +17,6 @@ namespace SequenceCode
         GameStatusEnum GameStatus;
         List<Label> ImageLabels;
         List<Button> ImageButtons;
-/// <summary>
-/// AS Name this variable more clearly.
-/// </summary>
         int time = 10;
         int score = 1;
         int level = 1;                  //
@@ -37,7 +32,6 @@ namespace SequenceCode
             ImageButtons.ForEach(b => b.Click += B_Click);
             txtLevelnumber.Text = (level++).ToString();
         }
-///AS Name these paramaters more clearly ie: Enable1, Enable2, Enable3
         private void controls(bool Enable1, bool Enable2, bool Enable3)
         {
             ImageButtons.ForEach(b => b.Enabled = Enable2);
@@ -65,7 +59,6 @@ namespace SequenceCode
                     break;
             }
         }
-///AS I don't think it makes the code more concise but making a new procedure for this, put the code directly into SetBackcolor
 
         private void SetBackcolor()
         {
