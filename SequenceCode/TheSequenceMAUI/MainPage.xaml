@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheSequenceMAUI.MainPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="BackgroundColor" Value="Black"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="Frame">
+            <Setter Property="BorderColor" Value="Black"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <Grid RowDefinitions="*,2*,*,4*">
+        <Label x:Name="lblMessageBox" Grid.Row="0" Text="Click start to begin game." BackgroundColor="White"/>
+        <Grid Grid.Row="1" ColumnDefinitions="*,*,*,*,*">
+            <Label x:Name="lblImageBox1" Grid.Column="0" />
+            <Label x:Name="lblImageBox2" Grid.Column="1" />
+            <Label x:Name="lblImageBox3" Grid.Column="2"/>
+            <Label x:Name="lblImageBox4" Grid.Column="3" />
+            <Grid Grid.Column="4" ColumnDefinitions="*,*" RowDefinitions="*,*,*">
+                <Label Text="  LEVEL:" FontSize="16" BackgroundColor="White" Grid.Column="0" Grid.Row="0" Margin="8"/>
+                <Label Text="# of perfect scores:" BackgroundColor="White" Grid.Column="0" Grid.Row="1" Margin="0"/>
+                <Label Text="Round Score:" BackgroundColor="White" Grid.Column="0" Grid.Row="2" Margin="0,4,0,4"/>
+                <Frame Grid.Column="1" Grid.Row="0">
+                    <Entry x:Name="txtLevelNumber"/>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="1">
+                    <Entry x:Name="txtPerfectScores"/>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="2">
+                    <Entry x:Name="txtRoundScore"/>
+                </Frame>
+            </Grid>
+        </Grid>
+
+        <Button BackgroundColor="LawnGreen" Grid.Row="2" Margin="25,10,25,10"/>
+        <Grid Grid.Row="3"  ColumnDefinitions="*,*,*,*,*,*,*,*" RowDefinitions="*,*,*">
+            <Button x:Name="btnA" Text="A" Grid.Column="0" Grid.Row="0"/>
+            <Button x:Name="btnB" Text="B" Grid.Column="1" Grid.Row="0"/>
+            <Button x:Name="btnC" Text="C" Grid.Column="2" Grid.Row="0"/>
+            <Button x:Name="btnD" Text="D" Grid.Column="3" Grid.Row="0"/>
+            <Button x:Name="btnE" Text="E" Grid.Column="4" Grid.Row="0"/>
+            <Button x:Name="btnF" Text="F" Grid.Column="5" Grid.Row="0"/>
+            <Button x:Name="btnG" Text="G" Grid.Column="6" Grid.Row="0"/>
+            <Button x:Name="btnH" Text="H" Grid.Column="7" Grid.Row="0"/>
+            <Button x:Name="btnI" Text="I" Grid.Column="0" Grid.Row="1"/>
+            <Button x:Name="btnJ" Text="J" Grid.Column="1" Grid.Row="1"/>
+            <Button x:Name="btnK" Text="K" Grid.Column="2" Grid.Row="1"/>
+            <Button x:Name="btnL" Text="L" Grid.Column="3" Grid.Row="1"/>
+            <Button x:Name="btnM" Text="M" Grid.Column="4" Grid.Row="1"/>
+            <Button x:Name="btnN" Text="N" Grid.Column="5" Grid.Row="1"/>
+            <Button x:Name="btnO" Text="O" Grid.Column="6" Grid.Row="1"/>
+            <Button x:Name="btnP" Text="P" Grid.Column="7" Grid.Row="1"/>
+            <Button x:Name="btnQ" Text="Q" Grid.Column="0" Grid.Row="2"/>
+            <Button x:Name="btnR" Text="R" Grid.Column="1" Grid.Row="2"/>
+            <Button x:Name="btnStart" FontFamily="" FontSize="Large" Text="START" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="4" BackgroundColor="Red"/>
+            <Button x:Name="btnS" Text="S" Grid.Column="6" Grid.Row="2"/>
+            <Button x:Name="btnT" Text="T" Grid.Column="7" Grid.Row="2"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>
