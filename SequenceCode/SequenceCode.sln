@@ -5,7 +5,13 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SequenceCode", "SequenceCode\SequenceCode.csproj", "{F5055239-7F10-46A1-B7AD-8C53E68AFE94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSequenceMAUI", "TheSequenceMAUI\TheSequenceMAUI.csproj", "{5C032645-A0E7-4BB9-8740-1A9A39C7C57C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSequenceMAUI", "TheSequenceMAUI\TheSequenceMAUI.csproj", "{5C032645-A0E7-4BB9-8740-1A9A39C7C57C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSequenceSystem", "TheSequenceSystem\TheSequenceSystem.csproj", "{3B481103-FE34-4F05-B762-CDBD3828EBB1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSequenceTest", "TheSequenceTest\TheSequenceTest.csproj", "{F950495B-5E31-4F95-905D-050927BC4089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSequence", "TheSequence\TheSequence.csproj", "{AD1CA61B-665B-46A7-AB20-8493838FA7E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +29,18 @@ Global
 		{5C032645-A0E7-4BB9-8740-1A9A39C7C57C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C032645-A0E7-4BB9-8740-1A9A39C7C57C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5C032645-A0E7-4BB9-8740-1A9A39C7C57C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3B481103-FE34-4F05-B762-CDBD3828EBB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B481103-FE34-4F05-B762-CDBD3828EBB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B481103-FE34-4F05-B762-CDBD3828EBB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B481103-FE34-4F05-B762-CDBD3828EBB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F950495B-5E31-4F95-905D-050927BC4089}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F950495B-5E31-4F95-905D-050927BC4089}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F950495B-5E31-4F95-905D-050927BC4089}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F950495B-5E31-4F95-905D-050927BC4089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD1CA61B-665B-46A7-AB20-8493838FA7E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD1CA61B-665B-46A7-AB20-8493838FA7E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD1CA61B-665B-46A7-AB20-8493838FA7E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD1CA61B-665B-46A7-AB20-8493838FA7E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,13 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Text;
 
 namespace SequenceCode
 {
@@ -32,6 +23,7 @@ namespace SequenceCode
             ImageButtons.ForEach(b => b.Click += B_Click);
             txtLevelnumber.Text = (level++).ToString();
         }
+
         private void controls(bool Enable1, bool Enable2, bool Enable3)
         {
             ImageButtons.ForEach(b => b.Enabled = Enable2);

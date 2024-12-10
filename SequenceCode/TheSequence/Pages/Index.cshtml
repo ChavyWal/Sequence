@@ -1,0 +1,18 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4 ">The Sequence Game</h1>
+    <h4 class="font-monospace text-secondary ">created by: Chavy Walter</h4>
+    <p class="text-secondary">
+        The user is presented with four empty boxes and 20 buttons with images on them. When the
+        user presses start one image appears in each of the boxes. The user gets to memorize the 
+        images in the correct sequence, when he is ready to start he clicks the "click me to start" 
+        button and presses the right buttons according to the iumages he memorized. Each time he gets
+        it right, the score goes up! 
+    </p>
+    <a  asp-area="" asp-page="/Sequence">START PLAYING</a>
+</div>

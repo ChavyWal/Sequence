@@ -1,0 +1,86 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.spot {
+    min-height: 210px;
+    max-height: 210px;
+    width: 89%;
+    min-width: 208px;
+    background-color: #1A0933;
+    border: 1px solid black;
+    margin: 10px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 150px;
+    font-family: Wingdings;
+}
+
+.spotimage {
+    background-color: #1A0933;
+    border: 1px solid white;
+}
+
+.btnimage {
+    width: 100%;
+    height: 100%;
+    margin: 11px;
+    border:solid 2px black;
+    font-size: 45px;
+    font-family: Wingdings;
+    color: black;
+}
+
+.btnstart {
+    width: 100%;
+    height: 100%;
+    margin: 11px;
+    border: solid 2px black;
+    font-size: 45px;
+    color: aqua;
+}
+
+.spotGuess {
+    background-color: #1A0933;
+    color: cyan;
+    border: 1px solid cyan;
+}
+
+.spotCorrect {
+    background-color: #1A0933;
+    color: greenyellow;
+    border: 1px solid cyan;
+}
+
+.spotIncorrect {
+    background-color: #1A0933;
+    color: red;
+    border: 1px solid cyan;
+}
+
+.fontWindings{
+    font-family: Wingdings;
+}
+
+
+
