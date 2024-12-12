@@ -1,0 +1,199 @@
+﻿@page
+@model TheSequence.Pages.sequence_jQueryModel
+@{
+}
+
+<div class="row">
+    <div class="col-7"><label id="msg" class="text">Click start to begin game.</label> </div>
+    <div class="col-2"><p>Correct Images:</p></div>
+    <div class="col-2"><label id="answer" class="fontWindings text-secondary fs-4"></label></div>
+    <label id="round" class="text">round #</label>
+    <label id="score" class="text">score #</label>
+</div>
+<div class="col-11">
+    <div class="row">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <label class="spot " id="s1"> </label>
+                </div>
+                <div class="col">
+                    <label class="spot " id="s2"> </label>
+                </div>
+                <div class="col">
+                    <label class="spot " id="s3"> </label>
+                </div>
+                <div class="col">
+                    <label class="spot " id="s4"> </label>
+                </div>
+
+
+            </div>
+        </div>
+        <div class=" row">
+            <button class="btn text-bg-secondary mt-4 mb-3 " id="ruReady">Click me when you are ready to START </button>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary ">A</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">B</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">C</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">D</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">E</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">F</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">G</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">H</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary ">I</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">J</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">K</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">L</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">M</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">N</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">O</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">P</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary ">Q</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">R</button>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn bg-body-secondary btnstart" id="startgame">START</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">S</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btnimage bg-body-secondary">T</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @section Scripts {
+        <script>
+            const randomLetter = () => String.fromCharCode(Math.random() * (85 - 65) + 65)
+            let spot;
+            let s;
+            let r;
+            let imagebtn;
+            let msg;
+            let round ;
+            let score;
+            let answer;
+            let btnspressed = [];
+            let spotText = [];
+            let n = 0;
+            let roundnum = 0;
+            let scorenum = 0;
+            
+
+            $(document).ready(function () {
+                spot = [...document.querySelectorAll(".spot")]
+                s = $("#startgame").click(startGame);
+                r = $("#ruReady").prop('disabled', true).click(readytoguess);
+                imagebtn = [...$(".btnimage")];
+                msg = document.querySelector("#msg");
+                round = document.querySelector("#round");
+                score = document.querySelector("#score");
+                answer = document.querySelector("#answer");
+                $(imagebtn).prop('disabled', true).click(btnPress);
+            })
+
+            function btnPress(event) {
+                n++
+                let btn = event.target;
+                const imgBox = $(`#s${n}`).addClass("spotimage").text(btn.textContent).removeClass("spotGuess")
+                btnspressed.push(btn.textContent);
+                if (n > 3) {
+                    $(imagebtn).prop('disabled', true)
+                    checkIfRight();
+                }
+            }
+
+            function checkIfRight() {
+                n = 0;
+                if (btnspressed.join('') === spotText.join('')) {
+                    msg.textContent = `GREAT JOB YOU GOT IT RIGHT!!!!!!!`
+                    score.textContent = `score # ${++scorenum}`;
+                    $(spot).addClass("spotCorrect");
+                }
+                else {
+                    msg.textContent = `I AM SORRY BUT THE IMAGES YOU HAVE ENTERED ARE NOT CORRECT!!!!!!!`;
+                    $(spot).addClass("spotIncorrect");
+                }
+                answer.textContent = spotText.join(' ');
+                btnspressed = [];
+                spotText = [];
+                $(s).prop('disabled', false);
+            }
+
+            function startGame() {
+                $(spot).addClass("spotimage").removeClass("spotGuess").removeClass("spotCorrect").removeClass("spotIncorrect");
+                spot.forEach(l => {
+                    l.textContent = randomLetter();
+                    spotText.push(l.textContent);
+                })
+                answer.textContent = "";
+                round.textContent = `round # ${++roundnum}`;
+                $(s).prop('disabled', true);
+                $(r).prop('disabled', false);
+                msg.textContent = "Memorize the images in the correct order.";
+            };
+
+            function readytoguess() {
+                $(spot).text("").removeClass("spotimage").addClass("spotGuess");
+                $(imagebtn).prop('disabled', false);
+                $(s).prop('disabled', true);
+                $(r).prop('disabled', true);
+                msg.textContent = "Enter the correct images in the order that you memorized them."
+            }
+        </script>
+    }
