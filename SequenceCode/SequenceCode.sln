@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSequenceSystem", "TheSeq
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSequenceTest", "TheSequenceTest\TheSequenceTest.csproj", "{F950495B-5E31-4F95-905D-050927BC4089}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheSequence", "TheSequence\TheSequence.csproj", "{AD1CA61B-665B-46A7-AB20-8493838FA7E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheSequence", "TheSequence\TheSequence.csproj", "{AD1CA61B-665B-46A7-AB20-8493838FA7E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
