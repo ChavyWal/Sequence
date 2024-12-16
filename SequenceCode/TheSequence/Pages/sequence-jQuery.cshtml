@@ -140,7 +140,7 @@
                 s = $("#startgame").click(startGame);
                 r = $("#ruReady").prop('disabled', true).click(readytoguess);
                 imagebtn = [...$(".btnimage")];
-                msg = document.querySelector("#msg");
+                msg = $("#msg");
                 round = document.querySelector("#round");
                 score = document.querySelector("#score");
                 answer = document.querySelector("#answer");
@@ -176,11 +176,9 @@
             }
 
             function startGame() {
-                $(spot).addClass("spotimage").removeClass("spotGuess").removeClass("spotCorrect").removeClass("spotIncorrect");
-                spot.forEach(l => {
-                    l.textContent = randomLetter();
-                    spotText.push(l.textContent);
-                })
+                $(spot).addClass("spotimage").removeClass("spotGuess").removeClass("spotCorrect").removeClass("spotIncorrect").text(() => randomLetter());
+                spot.forEach(l => spotText.push(l.textContent))
+
                 answer.textContent = "";
                 round.textContent = `round # ${++roundnum}`;
                 $(s).prop('disabled', true);
