@@ -82,5 +82,10 @@ body {
     font-family: Wingdings;
 }
 
+.content-parent {
+    min-height: 100vh; 
+    display: flex; 
+    flex-direction: column; 
+}
 
 
