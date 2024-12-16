@@ -161,12 +161,12 @@
             function checkIfRight() {
                 n = 0;
                 if (btnspressed.join('') === spotText.join('')) {
-                    msg.textContent = `GREAT JOB YOU GOT IT RIGHT!!!!!!!`
+                    $(msg).text(`GREAT JOB YOU GOT IT RIGHT!!!!!!!`);
                     score.textContent = `score # ${++scorenum}`;
                     $(spot).addClass("spotCorrect");
                 }
                 else {
-                    msg.textContent = `I AM SORRY BUT THE IMAGES YOU HAVE ENTERED ARE NOT CORRECT!!!!!!!`;
+                    $(msg).text(`I AM SORRY BUT THE IMAGES YOU HAVE ENTERED ARE NOT CORRECT!!!!!!!`);
                     $(spot).addClass("spotIncorrect");
                 }
                 answer.textContent = spotText.join(' ');
@@ -183,7 +183,7 @@
                 round.textContent = `round # ${++roundnum}`;
                 $(s).prop('disabled', true);
                 $(r).prop('disabled', false);
-                msg.textContent = "Memorize the images in the correct order.";
+                $(msg).text("Memorize the images in the correct order.");
             };
 
             function readytoguess() {
@@ -191,7 +191,7 @@
                 $(imagebtn).prop('disabled', false);
                 $(s).prop('disabled', true);
                 $(r).prop('disabled', true);
-                msg.textContent = "Enter the correct images in the order that you memorized them."
+                $(msg).text("Enter the correct images in the order that you memorized them.");
             }
         </script>
     }
